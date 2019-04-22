@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--META-->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--SEO-->
+    <meta name="Description" content="">
+    <meta name="Rating" content="">
+    <meta name="Author" content="">
+    <meta name="Robots" content="index,follow">
+
+    <!--Config-->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+
+	<title>Match-Match-Game</title>
+
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <h1>Match-Match-Game</h1>
+    </header>
+
+    <section id="field-game">
+        <div class="container">
+
+            <!--navigation-->
+            <section class="wr-navigation none">
+                <div class="choice-levelGame">
+                    <button id="btn-level-game">Difficulty game</button>
+                    <ul class="list">
+                        <li id="low">low (5 x 2)</li>
+                        <li id="medium">medium (6 x 3)</li>
+                        <li id="high">high (8 x 3)</li>
+                    </ul>
+                </div>
+                <div class="choice-skirts none">
+                    <button id="btn-skirts-game">Skirt cards</button>
+                    <ul class="list">
+                        <li class="skirt-juve-white skirt" id="juve-white"></li>
+                        <li class="skirt-juve-black skirt" id="juve-black"></li>
+                        <li class="skirt-italy skirt" id="italy"></li>
+                    </ul>
+                </div>
+                <div class="start-game none">
+                    <button id="start-game">Start game</button>
+                </div>
+                <div class="timer">
+                    <h2 id="my-timer">
+                        <span id="time"></span>
+                    </h2>
+                </div>
+            </section>
+
+            <!--rules game-->
+            <section class="wr-rules">                
+                <h3>how to play:</h3>
+                <p>memory is a counter game where the object is to find pairs.</p>
+                <p>when the game begins, all pictures are hidden.</p>
+                <div class="rules-content">
+                    <div class="rules">
+                        <h3>to play:</h3>
+                        <ul>
+                            <li>Record the information about yourself and start playing</li>
+                            <li>select two cards</li>
+                            <li>if the cards are the same, they will disappear, and you will be able to choose two other cards</li>
+                            <li>if the cards are different, they will return to their original position and you will be able to select any two cards again</li>
+                            <li>The player that finds all pairs wins!</li>
+                            <li>Have Fun!</li>
+                        </ul>        
+                    </div>        
+                    <form>
+                        <h3>Player Information</h3>
+                        <ul>
+                            <li>
+                                <label for="first-name">First Name</label>
+                                <input id="first-name" type="text" required>
+                            </li>
+                            <li>
+                                <label for="last-name">Last Name</label>
+                                <input id="last-name" type="text" required>
+                            </li>
+                            <li>
+                                <label for="email">Email</label>
+                                <input id="email" type="email" required>
+                            </li>
+                        </ul>                                  
+                        <button id="set-info-player">Goal</button>
+                    </form>        
+                </div>        
+            </section>
+
+            <!--area game-->
+            <section class="wr-game none">
+                <ul id="playing-field"></ul>
+            </section>
+
+            <!--congratulation area-->
+            <section class="wr-end-game none">
+                <div class="congratulations">
+                    <h2>Congratulations!!!</h2>
+                    <p>you're a winner!</p>
+                    <p>your time is <span id="win-time"></span></p>
+                    <p>Click the <span>"new game"</span> button and improve your score!</p>
+                    <p>We believe in you!!!</p>
+                    <p>good luck!!!</p>
+                    <button id="new-game">new game</button>
+                </div>
+                <div class="score" id="score">
+                    <h2>Top-10 players:</h2>
+                    <ul id="list-score"></ul>
+                </div>
+                
+            </section>
+
+        </div>
+    </section>        
+    	
+    <!-- JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

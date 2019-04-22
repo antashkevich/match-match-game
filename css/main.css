@@ -1,0 +1,400 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}html {line-height: 1;}
+ol, ul {list-style: none;}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+q, blockquote {quotes: none;}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+a img {border: none;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+body, html {height: 100%;}
+body {
+    font-family: "Champions";
+    color: #fff;
+    /* overflow-x: hidden; */
+    background: url("../images/bg-game.png") center no-repeat;
+    background-size: cover;
+}
+
+/*NunitoSans*/
+/*regular*/
+@font-face {
+    font-family: "NunitoSans";
+    src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf") format("truetype");
+}
+/*light*/
+@font-face {
+    font-family: "NunitoSansLight";
+    src: url("../fonts/Nunito_Sans/NunitoSans-Light.ttf") format("truetype");
+}
+/*bold*/
+@font-face {
+    font-family: "NunitoSansBold";
+    src: url("../fonts/Nunito_Sans/NunitoSans-Bold.ttf") format("truetype");
+}
+/*black*/
+@font-face {
+    font-family: "NunitoSansBlack";
+    src: url("../fonts/Nunito_Sans/NunitoSans-Black.ttf") format("truetype");
+}
+/*Champions*/
+@font-face {
+    font-family: "Champions";
+    src: url("../fonts/Champions-Bold.ttf") format("truetype");
+}
+.container {
+    height: 100%;
+    width: 100%;
+    background: url("../images/bg-area.png") center no-repeat;
+    background-size: cover;
+}
+
+/*Header*/
+header {margin-bottom: 80px;}
+header h1 {
+    font-size: 42px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#field-game {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 3px solid #b1d7c0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*navigation*/
+.wr-navigation {position: relative;}
+.wr-navigation h2,
+.wr-navigation button,
+.wr-end-game h2 {
+    font-family: "Champions";
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin-bottom: 3px;
+    padding: 0;    
+}
+.wr-navigation button:hover {opacity: 0.7;}
+.wr-navigation button:focus {outline: none;}
+.wr-navigation ul {
+    display: none;
+    background: rgba(177, 215, 192, 0.8);
+    border-radius: 4px;
+    padding: 10px;
+}
+.wr-navigation ul li {
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.wr-navigation ul li:last-child {margin: 0;}
+.wr-navigation ul li:hover {box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);}
+.choice-skirts {
+    position: absolute;
+    top: -30px;
+    left: 220px;
+    z-index: 10;
+}
+.choice-skirts ul li {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 65px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.choice-skirts .skirt-juve-white {
+    background-image: url('../images/back1.PNG');
+}
+.choice-skirts .skirt-juve-black {
+    background-image: url('../images/back2.png');
+}
+.choice-skirts .skirt-italy {
+    background-image: url('../images/back3.png');
+}
+.choice-levelGame {
+    position: absolute;
+    top: -30px;
+    left: -3px;
+    z-index: 10;
+}
+.choice-levelGame ul li {
+    font-size: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 5px black;
+    padding: 10px 0;
+}
+.start-game {
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+.timer {
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.timer h2 {font-size: 40px;}
+.choice-levelGame.open ul {display: block;}
+.choice-skirts.open ul {display: block;}
+
+/*rules game*/
+.wr-rules {
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+.wr-rules h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px black;
+    margin-bottom: 15px;
+}
+.wr-rules p,
+.wr-rules label,
+.wr-end-game p {
+    font-size: 20px;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 5px black;
+    margin-bottom: 10px;
+}
+.wr-rules label {
+    width: 90px;
+    margin: 0 15px 0 0;
+}
+.wr-rules p:nth-child(3) {margin-bottom: 40px;}
+.wr-rules ul {padding-left: 30px;}
+.wr-rules ul li {
+    font-size: 20px;
+    text-transform: capitalize;
+    list-style: none;
+    line-height: 26px;
+    text-align: left;
+    text-shadow: 0px 0px 5px black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.wr-rules ul li:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background: url("../images/icon-ball.png") center no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+.rules-content {
+    display: flex;
+}
+.rules, form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+}
+form input {
+    border: 2px solid #b1d7c0;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+form input:focus {outline: none;}
+form button,
+.wr-end-game button {
+    font-family: "Champions";
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #b1d7c0;
+    border-radius: 10px;
+    background: #315d42;
+    padding: 5px 15px;
+}
+form button:hover,
+.wr-end-game button:hover {opacity: 0.7;}
+
+/*area game*/
+.wr-game ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; 
+}
+.lowCardGame {
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    margin: 70px 50px;
+}
+.medCardGame {
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    margin: 22px 40px;
+}
+.highCardGame {
+    cursor: pointer;
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    margin: 22px;
+}
+.wr-game ul li .front {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wr-game ul li .back {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.wr-end-game {
+    text-align: center;    
+    display: flex;
+    padding: 70px 30px 0;
+    margin: 0 auto;
+}
+.congratulations, .score {
+    width: 50%;
+}
+.wr-end-game h2 {
+    font-size: 38px;
+    text-shadow: 0px 0px 5px black;
+    margin-bottom: 20px;
+}
+.wr-end-game p {
+    font-size: 28px;
+}
+.wr-end-game span {
+    font-size: 34px;
+    color: #ffeb3b;
+}
+.wr-end-game button {
+    font-size: 30px;
+    border: 3px solid #b1d7c0;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.score ul {
+    padding: 0 50px;
+}
+.score li {
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 0px 0px 5px black;
+    counter-increment: step-counter;
+}
+.score li:before {
+    font-size: 34px;
+    color: white;
+    content: counter(step-counter) ".";
+}
+.player1 {background-image: url(../images/1.png);}
+.player2 {background-image: url(../images/2.png);}
+.player3 {background-image: url(../images/3.png);}
+.player4 {background-image: url(../images/4.png);}
+.player5 {background-image: url(../images/5.png);}
+.player6 {background-image: url(../images/6.png);}
+.player7 {background-image: url(../images/7.png);}
+.player8 {background-image: url(../images/8.png);}
+.player9 {background-image: url(../images/9.png);}
+.player10 {background-image: url(../images/10.png);}
+.player11 {background-image: url(../images/11.png);}
+.player0 {background-image: url(../images/12.png);}
+.wr-game ul .flipped {transform: rotateY(180deg);}
+.none {display: none;}
+.block {display: block;}
+.hidden {visibility: hidden;}
