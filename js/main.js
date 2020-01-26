@@ -112,12 +112,12 @@ class Game {
 
 			if (event.target.id === 'juve-white') {            
 	            frontSkirt.forEach( (el) => {
-					el.style.backgroundImage = 'url("images/back1.PNG")';
+					el.style.backgroundImage = 'url("images/back1.jpg")';
 				});
 			}  
 			if (event.target.id === 'juve-black') {            
 	            frontSkirt.forEach( (el) => {
-					el.style.backgroundImage = 'url("images/back2.png")';
+					el.style.backgroundImage = 'url("images/back2.jpg")';
 				});
 			}
 			if (event.target.id === 'italy') {            
